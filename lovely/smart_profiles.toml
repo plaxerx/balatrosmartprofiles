@@ -1,0 +1,15 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Profile V's slot must exist before the game loads the saved profile at start-up, which runs
+# ahead of every mod's Lua (game.lua:159, Steamodded boots at game.lua:212). Without it
+# Game:load_profile sees no G.PROFILES.V and falls back to profile 1.
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "self:load_profile(G.SETTINGS.profile or 1)"
+position = "before"
+payload = "self.PROFILES.V = self.PROFILES.V or {}"
+match_indent = true

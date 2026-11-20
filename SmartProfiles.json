@@ -1,0 +1,15 @@
+{
+    "id": "SmartProfiles",
+    "name": "Smart Profiles",
+    "author": ["plaxerx"],
+    "description": "Designed with the modder in mind. Each profile carries its own saved mods and mod settings, plus a vanilla-only V profile with achievements on (Multiplayer optional).",
+    "prefix": "smpr",
+    "main_file": "main.lua",
+    "version": "0.1.0",
+    "priority": 0,
+    "badge_colour": "3A7BED",
+    "badge_text_colour": "FFFFFF",
+    "display_name": "Smart Profiles",
+    "dependencies": ["Steamodded (>=1.0.0~BETA-0400)"],
+    "conflicts": []
+}
